@@ -1,0 +1,62 @@
+Great! Here are some **slightly longer but still simple and clear** question-and-answer pairs for your Constitution chatbot. These are useful for students or general users with basic legal or civic knowledge.
+
+---
+
+### 🏛 Government and Law
+
+**Q1 (EN):** How was the Islamic Republic of Iran established?
+**A1:** It was created after a public vote (referendum) in 1979, where over 98% of voters chose the Islamic Republic system.
+**Q1 (FA):** جمهوری اسلامی ایران چگونه تشکیل شد؟
+**A1:** بعد از انقلاب، مردم در یک همه‌پرسی در سال ۱۳۵۸ با بیش از ۹۸٪ رأی به جمهوری اسلامی رأی دادند.
+
+---
+
+**Q2 (EN):** What powers does the Leader (Rahbar) have?
+**A2:** The Leader sets general policies, supervises the government, and commands the armed forces.
+**Q2 (FA):** رهبر چه اختیاراتی دارد؟
+**A2:** رهبر سیاست‌های کلی را تعیین می‌کند، بر کار دولت نظارت دارد و فرمانده نیروهای مسلح است.
+
+---
+
+### ⚖️ Rights and Freedoms
+
+**Q3 (EN):** Are people free to believe in any religion?
+**A3:** Officially recognized religious minorities are free to practice their religion and manage their personal affairs.
+**Q3 (FA):** آیا مردم می‌توانند هر دینی داشته باشند؟
+**A3:** اقلیت‌های دینی شناخته‌شده می‌توانند آزادانه دین خود را اجرا کنند و امور شخصی خود را اداره کنند.
+
+---
+
+**Q4 (EN):** Does the Constitution allow people to criticize the government?
+**A4:** People have the right to speak freely, but it must not harm Islam or public interests.
+**Q4 (FA):** آیا مردم می‌توانند از دولت انتقاد کنند؟
+**A4:** مردم حق آزادی بیان دارند، ولی نباید به اسلام یا حقوق عمومی آسیب بزند.
+
+---
+
+### 📚 Education and Social Rights
+
+**Q5 (EN):** What does the Constitution say about education?
+**A5:** It says that education is free for everyone up to the end of high school, and higher education should be expanded.
+**Q5 (FA):** قانون اساسی درباره آموزش چه می‌گوید؟
+**A5:** می‌گوید آموزش تا پایان دبیرستان برای همه رایگان است و آموزش عالی باید گسترش یابد.
+
+---
+
+**Q6 (EN):** What rights do women have under the Constitution?
+**A6:** Women have equal protection under the law, and they can work, study, and participate in politics and society.
+**Q6 (FA):** طبق قانون اساسی، زنان چه حقوقی دارند؟
+**A6:** زنان از حمایت برابر قانونی برخوردارند و می‌توانند کار کنند، تحصیل کنند و در جامعه و سیاست مشارکت داشته باشند.
+
+---
+
+### 🚫 Justice and Protection
+
+**Q7 (EN):** What happens if someone is accused of a crime?
+**A7:** They are innocent until proven guilty and have the right to a fair trial and a lawyer.
+**Q7 (FA):** اگر کسی متهم به جرم شود، چه می‌شود؟
+**A7:** او تا زمانی که جرمش ثابت نشود، بی‌گناه است و حق دارد محاکمه عادلانه داشته باشد و وکیل بگیرد.
+
+---
+
+Would you like the questions to be grouped by chapters (e.g., judiciary, education, economy) or by article numbers for easier testing?
