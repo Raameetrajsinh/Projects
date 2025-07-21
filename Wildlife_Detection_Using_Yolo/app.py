@@ -19,6 +19,7 @@ uploaded_video = st.file_uploader("Upload a video", type=["mp4", "mov", "avi", "
 if uploaded_video is not None:
     input_temp = tempfile.NamedTemporaryFile(delete=False, suffix=".mp4")
     input_temp.write(uploaded_video.read())
+    input_temp.close()
 
 
     cap = cv2.VideoCapture(input_temp.name)
