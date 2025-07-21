@@ -43,7 +43,7 @@ if uploaded_video is not None:
             break
 
         if frame_count % frame_interval == 0:
-            results = model.predict(source=frame, conf=0.3, imgsz=640)
+            results = model.predict(source=frame, conf=0.3, imgsz=320, device = "cpu")
             annotated = results[0].plot()
             out.write(annotated)  
             stframe.image(annotated, channels="BGR", use_container_width=True)
