@@ -4,9 +4,11 @@ import cv2
 from ultralytics import YOLO
 import os
 
+model_path = os.path.join(os.path.dirname(__file__), "best.pt")
+
 @st.cache_resource
 def load_model():
-    return YOLO("best.pt") 
+    return YOLO(model_path) 
 
 model = load_model()
 
