@@ -28,7 +28,7 @@ if uploaded_video is not None:
     fps = cap.get(cv2.CAP_PROP_FPS)
     width  = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
     height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-    frame_interval = max(int(fps), 1)  
+    frame_interval = max(int(fps//3), 1)  
 
     output_path = os.path.join(tempfile.gettempdir(), "output_annotated.mp4")
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')
