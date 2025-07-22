@@ -9,17 +9,15 @@ st.cache_resource.clear()
 
 @st.cache_resource
 def load_model():
-    return YOLO(model_path) 
+    return YOLO(model_path)
 
 model = load_model()
 
 st.title("Wildlife Detection")
 
-
-
 with st.sidebar:
     uploaded_video = st.file_uploader("Upload a video", type=["mp4", "mov", "avi", "mkv"])
-    frame_interval_user = st.number_input("Process Frame", min_value=1, max_value=60, value=3, step=1)
+    frame_interval_user = st.number_input("Process Frame", min_value=1, max_value=30, value=5)
 
 if uploaded_video is not None:
     input_temp = tempfile.NamedTemporaryFile(delete=False, suffix=".mp4")
@@ -27,14 +25,6 @@ if uploaded_video is not None:
     input_temp.close()
 
     cap = cv2.VideoCapture(input_temp.name)
-
-    fps = cap.get(cv2.CAP_PROP_FPS)
-    width  = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
-    height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-
-    output_path = os.path.join(tempfile.gettempdir(), "output_annotated.mp4")
-    fourcc = cv2.VideoWriter_fourcc(*'mp4v')
-    out = cv2.VideoWriter(output_path, fourcc, fps, (width, height))
 
     stframe = st.empty()
     frame_count = 0
@@ -45,16 +35,15 @@ if uploaded_video is not None:
             break
 
         if frame_count % frame_interval_user == 0:
-            results = model.predict(source=frame, conf=0.3, imgsz=320, device="cpu")
+            results = model.predict(frame, conf=0.3, imgsz=224, device="cpu")
             annotated = results[0].plot()
-            out.write(annotated)
-            stframe.image(annotated, channels="BGR", use_container_width=True)
         else:
-            out.write(frame)
+            annotated = frame
+
+        if frame_count % (frame_interval_user * 2) == 0:
+            stframe.image(annotated, channels="BGR", use_container_width=True)
 
         frame_count += 1
 
     cap.release()
-    out.release()
-
-    st.success("Done processing video.")
+    st.success("Video finished.")
