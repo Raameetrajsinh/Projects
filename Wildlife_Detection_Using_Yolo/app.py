@@ -6,8 +6,7 @@ import os
 
 
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-model_path = os.path.join(BASE_DIR, "best.pt")
+model_path = os.path.join(os.path.dirname(__file__), "best.pt")
 
 @st.cache_resource
 def load_model():
