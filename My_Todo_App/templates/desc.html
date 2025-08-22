@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Describe{% endblock title %}
+{% block body %}
+
+<div class="container my-3">
+
+    <h2>{{todo.title.upper()}}</h2>
+
+    <h5><i>Description:</i></h5>
+
+    <p>{{todo.desc}}</p>
+
+    <a href="/"><button type="button" class="btn btn-outline-success btn-sm mx-1">Home</button></a>
+    <a href="/update/{{todo.sno}}"><button type="button" class="btn btn-outline-primary btn-sm ">Update</button></a>
+    <a href="/delete/{{todo.sno}}"><button type="button" class="btn btn-outline-danger btn-sm mx-1">Delete</button></a>
+
+</div>
+{% endblock body %}

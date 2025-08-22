@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% block body %}
+
+<div class="container my-3">
+    <h2>Add a Todo</h2>
+    <form action="/" method="post">
+        <div class="mb-3">
+            <label for="title" class="form-label">Todo Title</label>
+            <input type="text" name="title" class="form-control" id="title" required>
+        </div>
+        <div class="mb-3">
+            <label for="desc" class="form-label">Todo Description</label>
+            <input type="text" name="description" class="form-control" id="desc" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+</div>
+<div class="container my-3">
+    <h2>Your Todo</h2>
+    {% if alltodo|length == 0 %}
+    <div class="alert alert-dark" role="alert">
+        No Todos found!
+    </div>
+
+    {% else %}
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">SNo</th>
+                <th scope="col">Title</th>
+                <th scope="col">Date</th>
+                <th scope="col">Status</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for todo in alltodo %}
+            <tr>
+                <th scope="row">{{ loop.index }}</th>
+                <td>
+                    <a href="/description/{{todo.sno}}"
+                        class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">{{todo.title}}
+                    </a>
+                </td>
+                <td>{{todo.date_created}}</td>
+                <td>
+                    <a href="/toggle/{{todo.sno}}">
+                        <button type="button" class="btn btn-sm {% if todo.status %} btn-success {% else %} btn-danger 
+                        {% endif %}">
+                            {% if todo.status%}
+                            Completed
+                            {% else %}
+                            Pending
+                            {% endif %}
+
+                        </button>
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+</div>
+
+{% endblock body %}
